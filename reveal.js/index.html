@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reveal.js Templates</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        color: #333;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 50px;
+        color: white;
+      }
+
+      .header h1 {
+        font-size: 3em;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .header p {
+        font-size: 1.2em;
+        margin: 10px 0;
+        opacity: 0.9;
+      }
+
+      .templates-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .template-card {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .template-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .card-header {
+        padding: 25px;
+        background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+        color: white;
+        text-align: center;
+      }
+
+      .card-header.business {
+        background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+      }
+
+      .card-header.educational {
+        background: linear-gradient(45deg, #43e97b 0%, #38f9d7 100%);
+      }
+
+      .card-header h3 {
+        margin: 0;
+        font-size: 1.5em;
+      }
+
+      .card-body {
+        padding: 25px;
+      }
+
+      .features {
+        list-style: none;
+        padding: 0;
+        margin: 15px 0;
+      }
+
+      .features li {
+        padding: 5px 0;
+        color: #666;
+      }
+
+      .features li:before {
+        content: "✓ ";
+        color: #4caf50;
+        font-weight: bold;
+        margin-right: 8px;
+      }
+
+      .btn {
+        display: inline-block;
+        width: 100%;
+        padding: 12px 20px;
+        background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+      }
+
+      .examples-section {
+        margin-top: 60px;
+        text-align: center;
+      }
+
+      .examples-section h2 {
+        color: white;
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+
+      .examples-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin-top: 30px;
+      }
+
+      .example-link {
+        display: block;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+      }
+
+      .example-link:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-3px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>📊 Reveal.js Templates</h1>
+        <p>Choose a presentation template to get started quickly</p>
+      </div>
+
+      <div class="templates-grid">
+        <!-- Basic Template -->
+        <div class="template-card">
+          <div class="card-header">
+            <h3>🎯 Basic Template</h3>
+          </div>
+          <div class="card-body">
+            <p>
+              A simple, clean template perfect for getting started with
+              reveal.js presentations.
+            </p>
+            <ul class="features">
+              <li>Simple two-slide layout</li>
+              <li>Black theme with clean typography</li>
+              <li>Syntax highlighting included</li>
+              <li>Perfect for beginners</li>
+            </ul>
+            <a href="templates/basic-template.html" class="btn"
+              >Use Basic Template</a
+            >
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-header">
+            <h3>🎯 Minh Template</h3>
+          </div>
+          <div class="card-body">
+            <p>
+              A simple, clean template perfect for getting started with
+              reveal.js presentations.
+            </p>
+            <ul class="features">
+              <li>Simple two-slide layout</li>
+              <li>Black theme with clean typography</li>
+              <li>Syntax highlighting included</li>
+              <li>Perfect for beginners</li>
+            </ul>
+            <a href="templates/minh-template.html" class="btn"
+              >Use Basic Template</a
+            >
+          </div>
+        </div>
+
+        <!-- Business Template -->
+        <div class="template-card">
+          <div class="card-header business">
+            <h3>💼 Business Template</h3>
+          </div>
+          <div class="card-body">
+            <p>
+              Professional template designed for corporate presentations and
+              business meetings.
+            </p>
+            <ul class="features">
+              <li>Executive summary layout</li>
+              <li>Financial projections slide</li>
+              <li>Clean white theme</li>
+              <li>Charts and metrics display</li>
+              <li>Professional animations</li>
+            </ul>
+            <a href="templates/business-template.html" class="btn"
+              >Use Business Template</a
+            >
+          </div>
+        </div>
+
+        <!-- Educational Template -->
+        <div class="template-card">
+          <div class="card-header educational">
+            <h3>🎓 Educational Template</h3>
+          </div>
+          <div class="card-body">
+            <p>
+              Perfect for lectures, courses, and educational content with
+              interactive elements.
+            </p>
+            <ul class="features">
+              <li>Learning objectives section</li>
+              <li>Interactive exercises</li>
+              <li>Sky theme with gradients</li>
+              <li>Math formula support</li>
+              <li>Speaker notes included</li>
+            </ul>
+            <a href="templates/educational-template.html" class="btn"
+              >Use Educational Template</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="examples-section">
+        <h2>📚 More Examples</h2>
+        <p style="color: rgba(255, 255, 255, 0.8)">
+          Explore additional examples and advanced features
+        </p>
+        <div class="examples-grid">
+          <a href="examples/auto-animate.html" class="example-link"
+            >Auto-Animate</a
+          >
+          <a href="examples/backgrounds.html" class="example-link"
+            >Backgrounds</a
+          >
+          <a href="examples/markdown.html" class="example-link">Markdown</a>
+          <a href="examples/math.html" class="example-link">Math</a>
+          <a href="examples/transitions.html" class="example-link"
+            >Transitions</a
+          >
+          <a href="examples/media.html" class="example-link">Media</a>
+          <a href="examples/lightbox.html" class="example-link">Lightbox</a>
+          <a href="examples/layout-helpers.html" class="example-link"
+            >Layout Helpers</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
