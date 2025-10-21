@@ -5,6 +5,8 @@
   "scripts": {
     "build": "slidev build",
     "dev": "slidev --open",
+    "dev:test": "slidev test.md --open",
+    "dev:robot": "slidev templates/robot-programming.md --open",
     "export": "slidev export"
   },
   "dependencies": {
