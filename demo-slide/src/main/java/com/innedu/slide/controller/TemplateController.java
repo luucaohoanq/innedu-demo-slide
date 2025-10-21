@@ -7,6 +7,8 @@ import com.innedu.slide.entity.Template;
 import com.innedu.slide.exception.TemplateAlreadyExistsException;
 import com.innedu.slide.exception.TemplateNotFoundException;
 import com.innedu.slide.service.TemplateService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +28,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/templates")
+@Tag(name = "templates", description = "Template API")
 @CrossOrigin(origins = "*") // Allow frontend to access the API
 public class TemplateController {
     
@@ -41,6 +44,11 @@ public class TemplateController {
      * Get all templates
      */
     @GetMapping
+    @Operation(
+        summary = "Get all templates",
+        description = "Fetches all templates from the system.",
+        method = "GET"
+    )
     public ResponseEntity<List<TemplateResponse>> getAllTemplates() {
         try {
             List<Template> templates = templateService.getAllTemplates();

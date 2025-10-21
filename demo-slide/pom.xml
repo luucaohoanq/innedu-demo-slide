@@ -11,24 +11,18 @@
   </parent>
   <groupId>com.innedu</groupId>
   <artifactId>slide</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0</version>
   <name>demo-slide</name>
   <description>demo-slide</description>
-  <url/>
-  <licenses>
-    <license/>
-  </licenses>
-  <developers>
-    <developer/>
-  </developers>
-  <scm>
-    <connection/>
-    <developerConnection/>
-    <tag/>
-    <url/>
-  </scm>
+
   <properties>
     <java.version>17</java.version>
+
+    <!-- https://mvnrepository.com/artifact/com.github.gavlyukovskiy/p6spy-spring-boot-starter -->
+    <p6spy-springboot.version>1.12.0</p6spy-springboot.version>
+
+    <!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui -->
+    <springdoc.openapi.version>2.8.13</springdoc.openapi.version>
   </properties>
   <dependencies>
     <dependency>
@@ -63,16 +57,44 @@
       <scope>test</scope>
     </dependency>
 
+    <!--  Swagger  -->
     <dependency>
       <groupId>org.springdoc</groupId>
       <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-      <version>2.7.0</version>
+      <version>${springdoc.openapi.version}</version>
+    </dependency>
+
+    <!-- This swagger does not include the swagger ui, more lightweight when using   -->
+    <!--    <dependency>-->
+    <!--      <groupId>org.springdoc</groupId>-->
+    <!--      <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>-->
+    <!--      <version>${springdoc.openapi.version}</version>-->
+    <!--    </dependency>-->
+
+    <!--   Ref: https://springdoc.org/ -->
+    <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-starter-webmvc-scalar</artifactId>
+      <version>${springdoc.openapi.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.github.gavlyukovskiy</groupId>
+      <artifactId>p6spy-spring-boot-starter</artifactId>
+      <version>${p6spy-springboot.version}</version>
     </dependency>
 
     <dependency>
       <groupId>io.github.lcaohoanq</groupId>
       <artifactId>brlc</artifactId>
       <version>2.1.1</version>
+    </dependency>
+
+    <!-- Lombok -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <optional>true</optional>
     </dependency>
   </dependencies>
 

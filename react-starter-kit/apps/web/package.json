@@ -1,0 +1,33 @@
+{
+  "name": "@repo/web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "typecheck": "tsc --noEmit",
+    "deploy": "wrangler deploy --env-file ../../.env --env-file ../../.env.local",
+    "logs": "wrangler tail --env-file ../../.env --env-file ../../.env.local"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.3.1",
+    "@repo/ui": "workspace:*",
+    "astro": "^5.13.7",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@tailwindcss/postcss": "^4.1.13",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.13",
+    "typescript": "~5.9.2",
+    "wrangler": "^4.35.0"
+  }
+}
